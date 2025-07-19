@@ -73,7 +73,7 @@ const Form = () => {
             apologize us and please resend the form
           </span>{" "}
         </h3>
-        <div className="flex flex-row justify-center gap-9 lg:mt-24 md:scale-75 md:mt-8 sm:-ml-14 ">
+        <div className="flex flex-row justify-center gap-9 lg:mt-24 md:scale-75 md:mt-8 sm:-ml-14 sm:my-8 ">
           <FiInstagram size={100} className="hover:scale-105 duration-300" />
           <FaTelegram size={100} className="hover:scale-105 duration-300" />
           <MdEmail size={105} className="hover:scale-105 duration-300" />

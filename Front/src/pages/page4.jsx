@@ -6,7 +6,7 @@ const Page4 = () => {
     
   return (
     <center>
-    <h1 className='lg:mt-20 sm:mt-10 text-7xl font-extrabold text-white px-6 '>Projects</h1>
+    <h1 className='lg:mt-20 sm:mt-10 lg:text-7xl lg:my-3 sm:text-5xl sm:-my-6 font-boldy text-white px-6 '>Projects</h1>
    <div className=" scale-90 w-full px-4 py-10">
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-6 md:gap-2">
 <Projectcomp 
