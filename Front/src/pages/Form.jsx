@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaTelegram } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { MdEmail } from "react-icons/md";
+import axios from 'axios';
 
 const Form = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [domain, setDomain] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios.post("http://localhost:5000/api/form", {
+      name,
+      email,
+      domain,
+      description
+    })
+    .then(result => {
+      console.log("Form submitted successfully:", result.data);
+      alert("Your request has been submitted successfully!");
+      // clear form
+      setName("");
+      setEmail("");
+      setDomain("");
+      setDescription("");
+    })
+    .catch((err) => {
+      console.error("Failed to submit form:", err.message);
+      alert("Submission failed. Please check your connection or backend.");
+    });
+  };
+
   return (
     <div className="flex lg:flex-row sm:flex-col md:flex-row ">
       <div>
@@ -13,43 +43,48 @@ const Form = () => {
           </h1>
         </center>
         <form
-          className="flex flex-col bg-transparent backdrop-blur-2xl shadow-xl ml-12 -mt-5 shadow-black w-fit  p-5 m-6 rounded-lg sm:ml-20 hover:scale-105 duration-300"
-          onSubmit={() => {
-            alert("your request will be addresed soon... thank you");
-          }}
+          className="flex flex-col bg-transparent backdrop-blur-2xl shadow-xl ml-12 -mt-5 shadow-black w-fit  p-5 m-6 rounded-lg sm:ml-25 hover:scale-105 duration-300"
+          onSubmit={handleSubmit}
         >
-          <label className="text-xl font-sans text-white my-2 mx-5 ">
-            Your Name
-          </label>
+          <label className="text-xl font-sans text-white my-2 mx-5 ">Your Name</label>
           <input
             type="text"
-            className="w-[60vh] p-3 mx-3 py-4 rounded-md text-white bg-slate-950 hover:scale-105 hover:bg-white duration-300"
+            name="name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            className="w-[60vh] p-3 mx-3 py-4 rounded-md text-white bg-slate-950 hover:scale-105 focus:text-blue-950 hover:bg-white duration-300"
           />
-          <label className="text-xl font-sans text-white my-2 mx-5 ">
-            Your E-mail
-          </label>
+
+          <label className="text-xl font-sans text-white my-2 mx-5 ">Your E-mail</label>
           <input
             type="email"
-            className="w-[60vh]  bg-slate-950 p-3 mx-3 py-4 rounded-md text-white hover:scale-105 hover:bg-white duration-300"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            className="w-[60vh]  bg-slate-950 p-3 mx-3 py-4 rounded-md text-white focus:text-blue-950 hover:scale-105 hover:bg-white duration-300"
           />
-          <label className="text-xl font-sans text-white my-2 mx-5">
-            Domain your been loking for
-          </label>
+
+          <label className="text-xl font-sans text-white my-2 mx-5">Domain you're looking for</label>
           <input
             type="text"
-            className="w-[60vh] p-3 mx-3 py-4 rounded-md text-white  bg-slate-950 hover:scale-105 hover:bg-white duration-300"
+            name="domain"
+            onChange={(e) => setDomain(e.target.value)}
+            value={domain}
+            className="w-[60vh] p-3 mx-3 py-4 rounded-md text-white focus:text-blue-950  bg-slate-950 hover:scale-105 hover:bg-white duration-300"
           />
-          <label className="text-xl font-sans text-white my-2 mx-5 ">
-            Description
-          </label>
+
+          <label className="text-xl font-sans text-white my-2 mx-5 ">Description</label>
           <textarea
-            type="text"
+            name="description"
             rows={4}
-            className="w-[60vh] p-3 mx-3 py-4 rounded-md  bg-slate-950 text-white hover:scale-105 hover:bg-white duration-300"
+            onChange={(e) => setDescription(e.target.value)}
+            value={description}
+            className="w-[60vh] p-3 mx-3 py-4 rounded-md focus:text-blue-950 bg-slate-950 text-white hover:scale-105 hover:bg-white duration-300"
           />
+
           <button
             type="submit"
-            className=" hover:bg-white hover:text-blue-950 text-xl  w-[30vh] p-4 rounded- px-10 my-4 items-center mx-28 bg-blue-700 rounded-lg text-white hover:scale-105 duration-300"
+            className=" hover:bg-white hover:text-blue-950 text-xl  w-[30vh] p-4 px-10 my-4 mx-28 bg-blue-700 rounded-lg text-white hover:scale-105 duration-300"
           >
             Send
           </button>
@@ -82,6 +117,7 @@ const Form = () => {
           Thank you for your Time and visiting
         </h1>
       </div>
+
     </div>
   );
 };
