@@ -5,7 +5,7 @@ const Projectcomp = ({
   topic,
   detailing,
   imagename,
-  elobrate,
+  elaborate,
   videoname,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const Projectcomp = ({
   }, [isOpen]);
 
   return (
-    <div className="w-full mb-6 border rounded-xl p-4 bg-white  transition hover:scale-105  shadow-xl shadow-white/50">
+    <div className="w-full mb-6 border rounded-xl p-4 bg-white  transition hover:sc  shadow-xl shadow-white/50">
       {/* Card Content */}
       <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
         <img
@@ -43,14 +43,14 @@ const Projectcomp = ({
       {isOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+            className="fixed inset-0 flex flex-row bg-black/50 z-40 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
           />
           <div
             role="dialog"
             aria-modal="true"
             className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                       w-[95%] max-w-6xl max-h-[90vh] overflow-hidden z-50 
+                       w-[95%] max-w-6xl max-h-[90vh]  z-50 
                        rounded-xl shadow-xl bg-blue-950/60 text-white backdrop-blur-2xl border border-white/20 p-6"
           >
             {/* Modal Header */}
@@ -77,7 +77,7 @@ const Projectcomp = ({
               </div>
 
               <div className="lg:w-2/5 max-h-[60vh] overflow-y-auto pr-2">
-                <p className="text-base md:text-lg leading-relaxed">{elobrate}</p>
+                <p className="text-base md:text-lg leading-relaxed">{elaborate}</p>
               </div>
             </div>
           </div>

@@ -20,7 +20,7 @@ const projectList = [
   { topic: "Cat vs Dog Classifier", imagename: robotrose, videoname: video2 },
   { topic: "Credit Card Fraud Detection", imagename: robotrose, videoname: video3 },
   { topic: "Diabetes Prediction", imagename: robotrose, videoname: video4 },
-  { topic: "Document Reader", imagename: robotrose, videoname: video5 },
+  { topic: "Document Reader", imagename: robotrose, videoname: video5},
   { topic: "Gemini Chatbot", imagename: robotrose, videoname: video6 },
   { topic: "House Price Prediction", imagename: robotrose, videoname: video7 },
   { topic: "Iris Classification", imagename: robotrose, videoname: video8 },
@@ -42,13 +42,10 @@ const Page4 = () => {
             key={idx}
             {...project}
             detailing="2nd prize at Jai Sri Ram College with cash prize"
-            elobrate="This project showcases AI capabilities in real-world solutions. It was built using Python, React, and ML libraries to achieve accurate predictions or generate intelligent responses."
+            elaborate="This project showcases AI capabilities in real-world solutions. It was built using Python, React, and ML libraries to achieve accurate predictions or generate intelligent responses."
           />
         ))}
       </div>
-
-    
-
     </div>
   );
 };
