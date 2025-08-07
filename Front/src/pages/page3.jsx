@@ -1,8 +1,8 @@
 import React from 'react';
 import Archivements from '../coponents/archivements';
-import imagegreek from '../assets/greek.jpeg'
-import bubblerose from '../assets/bubbleaka.jpeg'
-import robotrose from '../assets/robotrose.jpeg'
+import imagegreek from '../assets/Blrimg.jpg'
+import bubblerose from '../assets/gpic.jpg'
+import robotrose from '../assets/kiot.jpg'
 const Page3 = () => {
   return (
     <>
@@ -12,42 +12,28 @@ const Page3 = () => {
        
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-6 md:gap-2">
 
-  
+  <div className=' h-1/2'>
+  <Archivements
+    topic={"Hackathon"}
+    imagename={robotrose}
+    detailing={"2nd prize at Jai Sri Ram College with cash prize  "}
+  />
+  </div>
         
       <Archivements
-          topic={"Hackathon"}
+          topic={"Hackathon Event"}
           imagename={imagegreek}
-          detailing={"2nd prize at Jai Sri Ram College with cash prize"}
+          detailing={"Top 15th in Reva University GameForce in  Game Challenge "}
         />
-        
-        <Archivements
+        <div className=' h-1/2'>
+          <Archivements
           topic={"Hackathon"}
-          imagename={robotrose}
-          detailing={"2nd prize at Jai Sri Ram College with cash prize"}
-        />
-        <Archivements
-          topic={"Hackathon"}
-        
           imagename={bubblerose}
-          detailing={"2nd prize at Jai Sri Ram College with cash prize"}
+          detailing={"Top 5th in Alliance University in Goal Tracking "}
         />
+        </div>
+
        
-          <Archivements
-          topic={"Hackathon"}
-          imagename={robotrose}
-          detailing={"2nd prize at Jai Sri Ram College with cash prize"}
-        />
-           <Archivements
-          topic={"Hackathon"}
-          imagename={bubblerose}
-          detailing={"2nd prize at Jai Sri Ram College with cash prize"}
-        />
-          <Archivements
-          topic={"Hackathon"}
-          imagename={imagegreek}
-          detailing={"2nd prize at Jai Sri Ram College with cash prize"}
-        />
-        
         
       </div>
     </div>

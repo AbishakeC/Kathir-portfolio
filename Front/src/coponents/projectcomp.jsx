@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { BiX } from 'react-icons/bi';
+import imagegenerator from '../assets/Videos/imagegenerator.mp4';
 import { FiX } from 'react-icons/fi';
 
 const Projectcomp = ({ topic, detailing, imagename, elobrate }) => {
@@ -9,6 +8,7 @@ const Projectcomp = ({ topic, detailing, imagename, elobrate }) => {
   return (
     <>
     <div className="bg-gradient-to-tl from-black via-slate-950 to-blue-600  rounded-md shadow-lg overflow-hidden w-full p-4 py-10 hover:shadow-xl hover:scale-110 hover:bg-gradient-to-br hover:from-blue-600 hover:to-black hover:via-slate-950 duration-200 ">
+     <video src={imagegenerator} alt={topic} autoPlay  className="w-full h-52 object-cover rounded-md mb-4"/>
       <img
         src={imagename}
         alt={topic}
