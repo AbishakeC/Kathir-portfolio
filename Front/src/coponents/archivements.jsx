@@ -4,7 +4,7 @@ const Archivements = ({ topic, detailing, imagename }) => {
   return (
     // components for archive ments dont have to change for details ,
     //     if you want any style chage make it over here 
-    <div className=" bg-slate-900/90 rounded-md shadow-lg shadow-blue-700/65 overflow-hidden w-full p-4 py-10  hover:shadow-xl hover:scale-110 hover:bg-white group duration-200  ">
+    <div className=" bg-transparent rounded-md shadow-lg shadow-white/60 overflow-hidden w-full p-4 py-10  hover:shadow-xl hover:scale-110 hover:bg-white group duration-200  ">
       <img
         src={imagename}
         alt={topic}

@@ -69,7 +69,7 @@ const Projectcomp = ({
           >
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl md:text-2xl font-semibold">{topic}</h3>
+              <h3 className="lg:text-6xl md:text-2xl sm:text-xl font-semibold">{topic}</h3>
               <FiX
                 size={28}
                 onClick={() => setIsOpen(false)}
@@ -92,7 +92,7 @@ const Projectcomp = ({
               </div>
 
               <div className="lg:w-2/5 max-h-[60vh]  pr-2">
-                <p className=" font-serif lg:text-[15px] md:text-lg  leading-relaxed whitespace-pre-wrap">
+                <p className=" font-sans lg:text-[16px] md:text-lg font-semibold  leading-relaxed whitespace-pre-wrap">
                   {elaborate || "No description available for this project."}
                 </p>
               </div>

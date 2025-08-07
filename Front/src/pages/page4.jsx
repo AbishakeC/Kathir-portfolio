@@ -11,7 +11,7 @@ import scematic from '../assets/projectimage/documentreader.jpg';
 import sales from '../assets/projectimage/sales.jpg';
 import house from '../assets/projectimage/house.jpg';
 import iris from '../assets/projectimage/iris.jpg';
-import personal from '../assets/projectimage/download.jpg';
+import personal from '../assets/projectimage/robo.jpg';
 import gemini from '../assets/projectimage/gemini.jpg';
 import oip from '../assets/projectimage/OIP.Webp';
 
@@ -176,11 +176,11 @@ Built a health risk classification model to detect early signs of diabetes based
 
 // ✅ Now this works fine
 const projectList = [
-  { topic: "AI Image Generator", imagename: aiimagegen, videoname: video1,elaborate:aitxt },
+  { topic: "AI Image Generator", imagename: aiimagegen, videoname: video1,elaborate:aitxt  },
   { topic: "Cat vs Dog Classifier", imagename: cat, videoname: video2,elaborate:catdog },
   { topic: "Credit Card Fraud Detection", imagename: credit, videoname: video3,elaborate:iristxt },
   { topic: "Diabetes Prediction", imagename: diabetis, videoname: video4 ,elaborate:diabetistxt},
-  { topic: "Document Reader", imagename: docred, videoname: video5,elaborate:personalchat },
+  { topic: "Document Reader", imagename: docred, videoname: video5,elaborate:textsumm },
   { topic: "Gemini Chatbot", imagename: gemini, videoname: video6,elaborate:geminichatbor },
   { topic: "House Price Prediction", imagename: house, videoname: video7,elaborate:housep },
   { topic: "Iris Classification", imagename: iris, videoname: video8,elaborate:ogiris },
