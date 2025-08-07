@@ -61,9 +61,9 @@ const Header = () => {
               damping: 35,
               delay:0.9
             }}  className="flex items-center gap-4">
-        <FaGithub size={30}  className="text-white hover:scale-125 transition duration-300" />
-        <FaTwitter size={30} className="text-white hover:scale-125 transition duration-300" />
-        <FaWhatsapp size={30} className="text-white hover:scale-125 transition duration-300" />
+        <FaGithub size={30}  className="text-white hover:scale-125 transition duration-300" href='' />
+        <FaTwitter size={30} className="text-white hover:scale-125 transition duration-300" href=''/>
+        <FaWhatsapp size={30} className="text-white hover:scale-125 transition duration-300" href='' />
         <button
           className="text-white focus:outline-none lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}

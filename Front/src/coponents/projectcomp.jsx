@@ -18,23 +18,31 @@ const Projectcomp = ({
   }, [isOpen]);
 
   return (
-    <div className="w-full mb-6  rounded-xl py-6 px-4 cursor-pointer group  transition bg-white  shadow-xl shadow-white/50 ">
+    <div className="w-full mb-6 rounded-xl py-6 px-4 cursor-pointer group transition bg-white shadow-xl shadow-white/50">
       {/* Card Content */}
-      <div className="flex flex-col md:flex-row items-start md:items-center gap-4"   onClick={() => setIsOpen(true)}>
-        
+      <div
+        className="flex flex-col md:flex-row items-start md:items-center gap-4"
+        onClick={() => setIsOpen(true)}
+      >
         <img
           src={imagename}
           alt={topic}
-          className="w-full md:w-48 h-auto rounded-lg object-cover shadow"
+          className="w-full md:w-48 h-52 rounded-lg object-cover shadow"
         />
 
         <div className="flex-1">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-950 group-hover:text-gray-950">{topic}</h2>
-          <p className="text-gray-600 mt-1 mb-3 text-sm md:text-base">{detailing}</p>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-950 group-hover:text-gray-950">
+            {topic}
+          </h2>
+          <p className="text-gray-600 mt-1 mb-3 text-sm md:text-base">
+            {detailing}
+          </p>
           <button
-            onClick={() => setIsOpen(true)}
-            className="text-blue-600 px-4 py-2 rounded hover:shadow-blue-800/70
-             transition font-semibold shadow-xl"
+            onClick={(e) => {
+              e.stopPropagation(); // prevent click from bubbling and reopening
+              setIsOpen(true);
+            }}
+            className="text-blue-600 px-4 py-2 rounded hover:shadow-blue-800/70 transition font-semibold shadow-xl"
           >
             ▶ Play Demo
           </button>
@@ -44,16 +52,20 @@ const Projectcomp = ({
       {/* Modal */}
       {isOpen && (
         <>
+          {/* Modal background */}
           <div
-            className="fixed inset-0 flex flex-row bg-black/50 z-40 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
             onClick={() => setIsOpen(false)}
-          />
+          ></div>
+
+          {/* Modal content */}
           <div
             role="dialog"
             aria-modal="true"
             className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                       w-[95%] max-w-6xl max-h-[90vh]  z-50 
-                       rounded-xl shadow-xl bg-blue-950/60 text-white backdrop-blur-2xl border border-white/20 p-6"
+                       w-[95%] max-w-6xl max-h-[90vh] z-50  overflow-y-auto [scrollbar-width:thin] [scrollbar-color:#3b82f6_#e5e7eb]
+                       rounded-xl shadow-xl bg-blue-950/60 text-white 
+                       backdrop-blur-2xl border border-white/20 p-6"
           >
             {/* Modal Header */}
             <div className="flex justify-between items-center mb-4">
@@ -62,11 +74,12 @@ const Projectcomp = ({
                 size={28}
                 onClick={() => setIsOpen(false)}
                 className="cursor-pointer hover:text-red-400 transition"
+                aria-label="Close modal"
               />
             </div>
 
             {/* Modal Body */}
-            <div className="flex flex-col lg:flex-row gap-6 overflow-hidden">
+            <div className="flex flex-col lg:flex-row gap-6 ">
               <div className="w-full lg:w-3/5">
                 <video
                   src={videoname}
@@ -78,8 +91,10 @@ const Projectcomp = ({
                 />
               </div>
 
-              <div className="lg:w-2/5 max-h-[60vh] overflow-y-auto pr-2">
-                <p className="text-base md:text-lg leading-relaxed">{elaborate}</p>
+              <div className="lg:w-2/5 max-h-[60vh]  pr-2">
+                <p className=" font-serif lg:text-[15px] md:text-lg  leading-relaxed whitespace-pre-wrap">
+                  {elaborate || "No description available for this project."}
+                </p>
               </div>
             </div>
           </div>
