@@ -60,7 +60,7 @@ const Mainpage = () => {
 
         <motion.div className='flex flex-col lg:my-4  sm:-my-4 md:flex-row sm:flex-row  justify-around items-center bg-transparent  bg-opacity-35 shadow-blue-400  shadow-md  p-6 rounded-3xl w-full scale-75 max-w-6xl gap-6  mt-8'  
         initial={{ opacity: 0,scale:0,  }}
-      animate={{ opacity: 1,scale:0.7, }}
+      animate={{ opacity: 1,scale:0.5, }}
       transition={{
         
         stiffness:100,

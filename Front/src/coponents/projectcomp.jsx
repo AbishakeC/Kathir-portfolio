@@ -18,9 +18,10 @@ const Projectcomp = ({
   }, [isOpen]);
 
   return (
-    <div className="w-full mb-6 border rounded-xl p-4 bg-white  transition hover:sc  shadow-xl shadow-white/50">
+    <div className="w-full mb-6  rounded-xl py-6 px-4 cursor-pointer group  transition bg-white  shadow-xl shadow-white/50 ">
       {/* Card Content */}
-      <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-4"   onClick={() => setIsOpen(true)}>
+        
         <img
           src={imagename}
           alt={topic}
@@ -28,11 +29,12 @@ const Projectcomp = ({
         />
 
         <div className="flex-1">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-800">{topic}</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-950 group-hover:text-gray-950">{topic}</h2>
           <p className="text-gray-600 mt-1 mb-3 text-sm md:text-base">{detailing}</p>
           <button
             onClick={() => setIsOpen(true)}
-            className="text-white px-4 py-2 rounded bg-blue-700 hover:bg-black transition font-semibold shadow"
+            className="text-blue-600 px-4 py-2 rounded hover:shadow-blue-800/70
+             transition font-semibold shadow-xl"
           >
             ▶ Play Demo
           </button>
