@@ -29,7 +29,7 @@ const Section = ({ title, children }) => {
   };
 
   return (
-    <div className="h-fit w-[50%] sm:w-full sm:px-4 md:w-[90%] md:mx-10 sm:mx-2 sm:my-3 lg:mx-2 bg-transparent shadow-lg shadow-black rounded-md p-4">
+    <div className="h-fit w-fit sm:w-[95vh] sm:ml-16 sm:px-4 md:w-[90%] md:mx-10 sm:mx-2 sm:my-3 lg:mx-2 bg-white/5 shadow-lg shadow-black rounded-md p-4">
       {/* Section Header */}
       <div
         className={`flex justify-between items-center cursor-pointer ${
@@ -61,11 +61,11 @@ const Page2 = () => {
   return (
     <>
       <center>
-        <h1 className="text-7xl font-semibold mt-12 -mb-24">Personals</h1>
+        <h1 className="text-6xl font-boldy mt-12 -mb-24">Personals</h1>
       </center>
-      <div className="flex lg:flex-row flex-col justify-around align-middle mt-32 scale-90 gap-6">
+      <div className="flex lg:flex-row flex-col justify-around align-middle mt-32 scale-90   gap-6">
         {/* Education */}
-        <Section title="Education">
+        <Section title="Education" className=''>
           <Educationbar topic="Graduation" details="Bachelor of Technology" />
           <Educationbar topic="Domain" details="Information Technology" />
           <Educationbar topic="Percentage" details="76%" />

@@ -11,7 +11,7 @@ const Archivements = ({ topic, detailing, imagename }) => {
     <>
       {/* Card */}
       <div
-        className="bg-transparent rounded-md shadow-lg shadow-white/60 overflow-hidden w-full p-2 hover:shadow-xl hover:scale-105 hover:bg-white group duration-200"
+        className="bg-black/50 rounded-md shadow-lg shadow-black/25 overflow-hidden w-full p-2 hover:shadow-xl hover:scale-105  hover:bg-white group duration-200"
       >
         <img
           src={imagename}
@@ -19,10 +19,10 @@ const Archivements = ({ topic, detailing, imagename }) => {
           onClick={openModal}
           className="w-full h-48 sm:h-52 md:h-64 object-cover rounded-md mb-4 cursor-pointer"
         />
-        <h1 className="text-xl sm:text-2xl font-bold text-white group-hover:text-black mb-2">
+        <h1 className="lg:text-lg sm:text-2xl font-bold text-white group-hover:text-black mb-2">
           {topic}
         </h1>
-        <p className="text-sm sm:text-base text-white group-hover:text-black font-sans">
+        <p className="lg:text-xl sm:text-base text-white group-hover:text-black font-sans">
           {detailing}
         </p>
       </div>

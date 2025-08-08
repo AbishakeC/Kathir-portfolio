@@ -5,8 +5,14 @@ module.exports = {
     extend: {
       fontFamily:{
         raw:"genos",
-        boldy:"Righteous"
-      }
+        boldy:"Righteous",
+        EagleLake:"Eagle+Lake",
+lavish: ['"Lavishly Yours"', 'cursive'],
+ eagle: ['"Eagle Lake"', 'cursive'],  
+
+
+
+}
     },
   },
   plugins: [],

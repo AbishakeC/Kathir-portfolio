@@ -7,8 +7,8 @@ import Page2 from './pages/page2'
 import Page3 from './pages/page3'
 import Page4 from './pages/page4'
 import Page5 from './pages/page5'
-import Form from './pages/Form'
-import CertificationsPage from './pages/CertificationsPage';
+import ContactUs from './coponents/ContactUs.jsx'
+
 
 const App = () => {
   return (
@@ -16,11 +16,11 @@ const App = () => {
     <Header/>
     <Mainpage/>
     <Page2/>
-    <Page3/>
-    <CertificationsPage/>
+    {/* <CertificationsPage/> */}
     <Page4/>
+    <Page3/>
     <Page5/>
-    <Form/>
+    <ContactUs/>
     </div>
   )
 }

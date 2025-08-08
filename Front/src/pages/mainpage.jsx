@@ -1,7 +1,7 @@
 import React from 'react';
 import tecky from "../assets/tecky.jpg";
 import { motion } from 'framer-motion';
-import PdfDoc from '../assets/AadhaarCard.pdf'
+import PdfDoc from '../assets/KATHIR CV.pdf'
 import { GoDownload } from 'react-icons/go';
 
 const Mainpage = () => {

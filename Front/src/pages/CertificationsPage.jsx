@@ -1,5 +1,6 @@
 import React from 'react';
 import CertificationCard from '../coponents/CertificationCard';
+import guvi from '../assets/GuviCertification - 015Iu77306sBWqH921.png' 
 
 // import aws from '../assets/certifications/aws.png';
 // import python from '../assets/certifications/python.png';
@@ -8,10 +9,10 @@ import CertificationCard from '../coponents/CertificationCard';
 const CertificationsPage = () => {
   const certifications = [
     {
-      name: 'AWS Cloud Practitioner',
-      provider: 'Amazon Web Services',
-      year: '2023',
-      // image: aws,
+      name: 'Guvi certification',
+      provider: 'Guvi course provider',
+      year: '2024',
+      image: guvi,
     },
     {
       name: 'Python for Everybody',

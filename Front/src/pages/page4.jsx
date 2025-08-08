@@ -196,11 +196,11 @@ const Page4 = () => {
   const [showAll, setShowAll] = useState(false);
 
   // Show first 6 projects by default, rest on toggle
-  const visibleProjects = showAll ? projectList : projectList.slice(0, 6);
+  const visibleProjects = showAll ? projectList : projectList.slice(0, 5);
 
   return (
-    <div className="min-h-screen bg-transparent text-white py-16 px-6 -mt-28">
-      <h1 className="text-center text-4xl lg:text-6xl font-bold mb-12">Projects</h1>
+    <div className="min-h-screen bg-transparent text-white py-16 px-6 -mt-28 sm:mt-4">
+      <h1 className="text-center text-4xl lg:text-6xl font-boldy mb-14">Projects</h1>
 
       <div className="container mx-auto grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {visibleProjects.map((project, idx) => (

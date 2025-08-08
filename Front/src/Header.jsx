@@ -61,8 +61,8 @@ const Header = () => {
               damping: 35,
               delay:0.9
             }}  className="flex items-center gap-4">
-        <FaGithub size={30}  className="text-white hover:scale-125 transition duration-300" href='' />
-        <FaTwitter size={30} className="text-white hover:scale-125 transition duration-300" href=''/>
+        <FaGithub size={30}  className="text-white hover:scale-125 transition duration-300" href='https://github.com/KathirvelMurugesan' />
+        <FaTwitter size={30} className="text-white hover:scale-125 transition duration-300" href='https://x.com/murugesank93812?s=08'/>
         <FaWhatsapp size={30} className="text-white hover:scale-125 transition duration-300" href='' />
         <button
           className="text-white focus:outline-none lg:hidden"

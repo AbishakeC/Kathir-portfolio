@@ -13,7 +13,7 @@ const Educationbar = ({topic,details}) => {
             duration:0.7,
             delay:0.3
           }} className=''>   
-       <div className=' text-white  text-xl font-semibold px-2 py-1 my-2 '>
+       <div className=' text-white  text-xl font-semibold px-2 py-1 my-2  '>
        {`${topic}`}</div>
   
 
