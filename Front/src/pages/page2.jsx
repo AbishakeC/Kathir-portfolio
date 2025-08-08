@@ -1,58 +1,98 @@
-import React from 'react'
-import ProgressBar from '../coponents/Progressbarcomp'
-import Educationbar from '../coponents/educationbar'
-import Techcomp from '../coponents/techcomp'
+import React, { useState, useEffect } from 'react';
+import ProgressBar from '../coponents/Progressbarcomp';
+import Educationbar from '../coponents/educationbar';
+import Techcomp from '../coponents/techcomp';
+import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+
+const Section = ({ title, children }) => {
+  const [isOpen, setIsOpen] = useState(true);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024); // lg breakpoint
+
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      const isLarge = window.innerWidth >= 1024;
+      setIsLargeScreen(isLarge);
+      setIsOpen(isLarge); // force open on large screens
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial check
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const toggleOpen = () => {
+    if (!isLargeScreen) {
+      setIsOpen(!isOpen);
+    }
+  };
+
+  return (
+    <div className="h-fit w-[50%] sm:w-full sm:px-4 md:w-[90%] md:mx-10 sm:mx-2 sm:my-3 lg:mx-2 bg-transparent shadow-lg shadow-black rounded-md p-4">
+      {/* Section Header */}
+      <div
+        className={`flex justify-between items-center cursor-pointer ${
+          isLargeScreen ? '' : 'p-2 rounded-md'
+        } transition`}
+        onClick={toggleOpen}
+      >
+        <h1 className="text-5xl sm:text-4xl font-bold text-blue-500">{title}</h1>
+        {!isLargeScreen && (
+          <span>
+            {isOpen ? <FiChevronUp size={24} /> : <FiChevronDown size={24} />}
+          </span>
+        )}
+      </div>
+
+      {/* Collapsible Content */}
+      <div
+        className={`transition-all duration-500 ease-in-out overflow-hidden ${
+          isOpen ? 'max-h-[1000px]' : 'max-h-0'
+        }`}
+      >
+        <div className="mt-4">{children}</div>
+      </div>
+    </div>
+  );
+};
 
 const Page2 = () => {
-  return (<> 
-  <center> 
-  <h1 className='text-7xl font-semibold mt-12 -mb-24'>Personals</h1>
-  </center> 
-   <div className='flex lg:flex-row flex-col justify-around align-middle mt-32 scale-90 '>
+  return (
+    <>
+      <center>
+        <h1 className="text-7xl font-semibold mt-12 -mb-24">Personals</h1>
+      </center>
+      <div className="flex lg:flex-row flex-col justify-around align-middle mt-32 scale-90 gap-6">
+        {/* Education */}
+        <Section title="Education">
+          <Educationbar topic="Graduation" details="Bachelor of Technology" />
+          <Educationbar topic="Domain" details="Information Technology" />
+          <Educationbar topic="Percentage" details="76%" />
+        </Section>
 
-   <div className=' h-fit w-[50%] sm:w-full sm:px-8 md:w-[90%] md:mx-10 sm:mx-2 sm:my-2  md:my-2   lg:mx-2 lg:-my-0 py-9 rounded-md  bg-transparent shadow-lg shadow-black '>
-            <h1 className='text-7xl p-3 font-bold text-blue-500'>Education</h1>
-            <Educationbar topic={"graduation"} details={"bachelor of technology"}/>
-            <Educationbar topic={"Domain"} details={"Information technology"}/>
-            <Educationbar topic={"percentage"} details={`76%`} />
-            {/* <ProgressBar progress={76} /> */}
-        </div>
-         
-        <div className=' h-fit w-[50%] sm:w-[90%] sm:px-8  md:w-[90%] md:mx-10 sm:mx-8 lg:mx-2    bg-transparent shadow-lg shadow-black rounded-md p-4'>
-             <h1 className='text-7xl p-3 font-bold text-blue-500' >Skills</h1>
-        
-             <ProgressBar progress={90} techname={"python"}/>
-            
+        {/* Skills */}
+        <Section title="Skills">
+          <ProgressBar progress={90} techname="Python" />
+          <ProgressBar progress={60} techname="React JS" />
+          <ProgressBar progress={90} techname="Flask" />
+          <ProgressBar progress={70} techname="Database" />
+          <ProgressBar progress={75} techname="Machine Learning & Deep Learning" />
+          <ProgressBar progress={75} techname="Data Science" />
+        </Section>
 
-             
-             <ProgressBar progress={60} techname={"React JS"}/>
-
-             <ProgressBar progress={90} techname={"Flask"}/>
-
-           
-             <ProgressBar progress={70} techname={"Database"}/>
-
-             <ProgressBar progress={75} techname={"Machine learnig & deep learning"}/>
-
-             <ProgressBar progress={75} techname={"Data science"}/>
-
-           
-                   
-        </div>
-      
-        <div className=' h-fit w-[50%] sm:w-[90%] sm:px-8 md:w-[90%] md:mx-10 sm:mx-8 sm:my-2 md:my-2   lg:mx-2 lg:-my-0 py-9 rounded-md bg-transparent shadow-lg shadow-black '>
-            <h1 className='text-7xl p-3 font-bold text-blue-500'>Tech</h1>
-            <Techcomp techname={"Pycharm"} />
-            <Techcomp techname={"Vs code"} />
-            <Techcomp techname={"Anaconda"} />
-            <Techcomp techname={"AWS"} />
-            <Techcomp techname={"GIT HUB"} />
-            <Techcomp techname={"Mongo DB"} />
-        </div>
-    </div>
+        {/* Tech */}
+        <Section title="Tech">
+          <Techcomp techname="Pycharm" />
+          <Techcomp techname="VS Code" />
+          <Techcomp techname="Anaconda" />
+          <Techcomp techname="AWS" />
+          <Techcomp techname="GIT HUB" />
+          <Techcomp techname="Mongo DB" />
+        </Section>
+      </div>
     </>
+  );
+};
 
-  )
-}
-
-export default Page2
+export default Page2;
