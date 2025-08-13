@@ -18,13 +18,13 @@ const Page3 = () => {
     <div className="w-full scale-90 px-4 py-6">
       {/* Dropdown Header */}
       <div
-        className="cursor-pointer bg-white text-blue-500 text-center flex flex-row justify-between px-6 items-center rounded-lg py-4 shadow-lg transition-all duration-200"
+        className="cursor-pointer bg-slate-950 hover:bg-blue-900/45 text-white text-center flex flex-row justify-between px-6 items-center rounded-lg py-4 shadow-lg shadow-black/60 transition-all duration-200 "
         onClick={toggleDropdown}
       >
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-boldy">
           Achievements
         </h1>
-        <span className="p-4">{isOpen ? '▲' : '▼'}</span>
+        <span className="p-4 text-white">{isOpen ? '▲' : '▼'}</span>
       </div>
 
       {/* Dropdown Content */}
@@ -32,7 +32,7 @@ const Page3 = () => {
         <div className="mt-8 scale-95 w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <Archivements
-              topic="Hackathon – JSR College"
+              topic="Hackathon  JSR College"
               imagename={robotrose}
               detailing="Secured 2nd place in the state-level hackathon hosted by Jai Sri Ram Engineering College, winning a cash prize for innovative problem-solving."
             />
@@ -47,7 +47,7 @@ const Page3 = () => {
             <Archivements
               topic="Alliance University Hackathon"
               imagename={bubblerose}
-              detailing="Ranked among the Top 5 teams in Alliance University’s Goal Tracking Hackathon, showcasing teamwork and creativity in solution design."
+              detailing="Ranked among the Top 5 teams in Alliance University Goal Tracking Hackathon, showcasing teamwork and creativity in solution design."
             />
 
              <Archivements

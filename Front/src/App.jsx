@@ -1,6 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { GiHamburger } from 'react-icons/gi';
 import Header from './Header'
 import Mainpage from './pages/mainpage'
 import Page2 from './pages/page2'
@@ -40,7 +38,7 @@ Focused on building intelligent, scalable, and user-friendly solutions with prec
 
       <p className='text-base lg:text-2xl md:text-lg text-blue-500 font-raw py-2 my-16 px-3 scale-75 sm:scale-90'>
 Contact
-Let’s connect to collaborate, innovate, and create impactful solutions.
+Lets connect to collaborate, innovate, and create impactful solutions.
 Reach out via phone, email, or social platforms to start the conversation. </p>
     <ContactUs/>
     <p className='text-base lg:text-2xl md:text-lg text-blue-500 sm:text-blue-100 sm:scale-95 font-raw py-2 my-16 px-3 scale-75 sm:scale-90'>

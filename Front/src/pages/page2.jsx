@@ -64,22 +64,7 @@ const Page2 = () => {
         <h1 className="text-6xl font-boldy mt-12 -mb-24">Personals</h1>
       </center>
       <div className="flex lg:flex-row flex-col justify-around align-middle mt-32 scale-90 gap-6">
-        {/* Education */}
-        <Section title="Education" className='px-9'>
-          <Educationbar topic="Graduation" details="Bachelor of Technology" />
-          <Educationbar topic="Domain" details="Information Technology" />
-          <Educationbar topic="Percentage" details="71%" />
-        </Section>
-
-        {/* Skills */}
-        <Section title="Skills">
-          <ProgressBar progress={90} techname="Python" />
-          <ProgressBar progress={60} techname="React JS" />
-          <ProgressBar progress={75} techname="Machine Learning & Deep Learning" />
-          <ProgressBar progress={90} techname="Flask" />
-          <ProgressBar progress={70} techname="Database" />
-          <ProgressBar progress={75} techname="Data Science" />
-        </Section>
+      
 
         {/* Tech */}
         <Section title="Tech | Tools">
@@ -92,6 +77,25 @@ const Page2 = () => {
           <Techcomp techname="GIT HUB" />
           <Techcomp techname="Mongo DB" />
         </Section>
+
+        
+        {/* Skills */}
+        <Section title="Skills">
+          <ProgressBar progress={90} techname="Python" />
+          <ProgressBar progress={60} techname="React JS" />
+          <ProgressBar progress={75} techname="Machine Learning & Deep Learning" />
+          <ProgressBar progress={90} techname="Flask" />
+          <ProgressBar progress={70} techname="Database" />
+          <ProgressBar progress={75} techname="Data Science" />
+        </Section>
+
+          {/* Education */}
+        <Section title="Education" className='px-9'>
+          <Educationbar topic="Graduation" details="Bachelor of Technology" />
+          <Educationbar topic="Domain" details="Information Technology" />
+          <Educationbar topic="Percentage" details="71%" />
+        </Section>
+        
       </div>
     </>
   );
