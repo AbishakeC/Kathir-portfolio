@@ -8,6 +8,7 @@ import DatascienceIntern from '../assets/Screenshot_2024_0322_175146.jpg';
 import Allience from '../assets/Allience.jpeg';
 import codsoft from '../assets/Screenshot_2024_0322_085934.jpg';
 import robotrose from '../assets/kiot.jpg';
+import skillvertex from '../assets/skillvertex.jpg'
 
 const Page3 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +38,10 @@ const Page3 = () => {
             />
 
             <Archivements
-              topic="Guvi Certification"
-              imagename={guvi}
-              detailing="Successfully completed a certified online course with Guvi, including a hands-on mini project in full-stack development."
+              topic="Skill Vertex with Stipend "
+              imagename={skillvertex}
+              detailing="Completed Skill Vertex AI & Machine Learning internship with a stipend of ₹15,000, gaining hands-on experience in Prompt Engineering, Deep Learning, and model deployment. Worked on real-world projects
+               involving NLP, computer vision, and AI-powered solutions"
             />
 
             <Archivements
@@ -48,10 +50,10 @@ const Page3 = () => {
               detailing="Ranked among the Top 5 teams in Alliance University’s Goal Tracking Hackathon, showcasing teamwork and creativity in solution design."
             />
 
-            <Archivements
-              topic="CodSoft Internship"
-              imagename={codsoft}
-              detailing="Completed a software development internship with CodSoft during my third year, gaining real-world experience and project exposure."
+             <Archivements
+              topic="Guvi Certification"
+              imagename={guvi}
+              detailing="Successfully completed a certified online course with Guvi, including a hands-on mini project in full-stack development."
             />
 
             <Archivements
@@ -59,6 +61,14 @@ const Page3 = () => {
               imagename={imagegreek}
               detailing="Achieved Top 15 finalist position in the GameForce Game Development Challenge at Reva University, competing among 100+ teams."
             />
+
+            <Archivements
+              topic="CodSoft Internship"
+              imagename={codsoft}
+              detailing="Completed a software development internship with CodSoft during my third year, gaining real-world experience and project exposure."
+            />
+
+            
 
             <Archivements
               topic="Data Science Internship"

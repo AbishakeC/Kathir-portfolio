@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Projectcomp from '../coponents/Projectcomp';
+import { GoDownload } from 'react-icons/go';
+import PdfDoc from '../assets/Paper.pdf';
+
 
 import aiimagegen from "../assets/projectimage/aimagegen.jpg";
 import cat from '../assets/projectimage/catanddog.jpg';
@@ -14,8 +17,10 @@ import iris from '../assets/projectimage/iris.jpg';
 import personal from '../assets/projectimage/robo.jpg';
 import gemini from '../assets/projectimage/gemini.jpg';
 import oip from '../assets/projectimage/OIP.Webp';
+import dashboard from '../assets/projectimage/Dashboard.png';
 
 import video1 from '../assets/Videos/imagegeneration.mp4';
+import video14 from '../assets/Videos/dashboard.mp4';
 import video2 from '../assets/Videos/Catsordogclassificationinsvm.mp4';
 import video3 from '../assets/Videos/Cridit card fraud detection.mp4';
 import video4 from '../assets/Videos/Diabetes based on health condition.mp4';
@@ -174,21 +179,44 @@ Built a health risk classification model to detect early signs of diabetes based
 #HealthTech #DiabetesPrediction #MLInHealthcare #AIForGood
 `;
 
+const finAnalysis = `📊 Built a Finance Analysis Dashboard!
+
+Thrilled to showcase my latest project: a full-stack Finance Analysis & Insights Dashboard with real-time analytics:
+
+✅ Live market data, portfolio & P/L tracking
+✅ Budgeting, cashflow, and KPI visualizations (ROI, Sharpe, burn rate)
+✅ Forecasts with ML (ARIMA/Prophet) and anomaly detection
+✅ Scenario analysis, what-ifs, and goal tracking
+✅ Alerts & notifications for thresholds and events
+✅ Role-based access, audit logs, and exportable reports
+
+🛠 Tech Stack:
+- Frontend: React + Tailwind, Zustand/Redux, Chart.js/Plotly
+- Backend: Node.js/Express + FastAPI (ML microservices)
+- Data: PostgreSQL, Redis cache, Pandas/NumPy, scikit-learn/Prophet
+- Infra: Docker, optional Kubernetes, CI/CD with GitHub Actions
+
+📂 Data Inputs: CSV/Excel imports, REST/WebSocket feeds, broker APIs
+🔐 Features: JWT auth, rate limiting, error tracking, and observability
+🚀 Deployed as containerized microservices; scalable & modular by design
+`;
+
 
 // Project list
 const projectList = [
+  { topic: "Own Chatbot", imagename: personal, videoname: video9, elaborate: personalchat },
   { topic: "AI Image Generator", imagename: aiimagegen, videoname: video1, elaborate: aitxt },
-  { topic: "Cat vs Dog Classifier", imagename: cat, videoname: video2, elaborate: catdog },
-  { topic: "Credit Card Fraud Detection", imagename: credit, videoname: video3, elaborate: iristxt },
-  { topic: "Diabetes Prediction", imagename: diabetis, videoname: video4, elaborate: diabetistxt },
-  { topic: "Document Reader", imagename: docred, videoname: video5, elaborate: textsumm },
+  { topic: "Dashboard", imagename: dashboard, videoname: video14, elaborate: finAnalysis },
   { topic: "Gemini Chatbot", imagename: gemini, videoname: video6, elaborate: geminichatbor },
-  { topic: "House Price Prediction", imagename: house, videoname: video7, elaborate: housep },
-  { topic: "Iris Classification", imagename: iris, videoname: video8, elaborate: ogiris },
-  { topic: "Personal Chatbot", imagename: personal, videoname: video9, elaborate: personalchat },
-  { topic: "Sales Forecasting", imagename: sales, videoname: video10, elaborate: slae },
   { topic: "Semantic Search", imagename: scematic, videoname: video11, elaborate: scematictext },
   { topic: "Text Generator", imagename: oip, videoname: video12, elaborate: textgenerator },
+  { topic: "Document Reader", imagename: docred, videoname: video5, elaborate: textsumm },
+  { topic: "Cat vs Dog Classifier", imagename: cat, videoname: video2, elaborate: catdog },
+  { topic: "Iris Classification", imagename: iris, videoname: video8, elaborate: ogiris },
+  { topic: "Credit Card Fraud Detection", imagename: credit, videoname: video3, elaborate: iristxt },
+  { topic: "Diabetes Prediction", imagename: diabetis, videoname: video4, elaborate: diabetistxt },
+  { topic: "House Price Prediction", imagename: house, videoname: video7, elaborate: housep },
+  { topic: "Sales Forecasting", imagename: sales, videoname: video10, elaborate: slae },
   { topic: "Titanic Prediction", imagename: titanic, videoname: video13, elaborate: tita },
 ];
 
@@ -207,17 +235,42 @@ const Page4 = () => {
           <Projectcomp key={idx} {...project} />
         ))}
       </div>
+        
 
       {/* Show more/less button */}
-      <div className="mt-10 text-center">
+      <div className="mt-10 text-center sm:mt-12">
         <button
           onClick={() => setShowAll(!showAll)}
           className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md text-lg font-semibold transition duration-200"
         >
           {showAll ? 'Show Less ▲' : 'Show More ▼'}
         </button>
+        
       </div>
+    <center>
+       <p className='text-base lg:text-2xl md:text-lg text-blue-500 font-raw py-2 my-8 px-3 scale-75 sm:scale-90'>
+Research & Paper Publications
+Author of innovative work in AI, Machine Learning, and scalable web technologies.
+Committed to contributing impactful ideas to the academic and developer community.
+
+ </p>
+
+            <h1 className="text-center text-4xl lg:text-6xl sm:mt-20 font-boldy mt-10 mb-10">Paper publision</h1>
+             <p className='text-base lg:text-2xl md:text-lg text-white font-raw py-2 px-3'>
+Abstract— This architecture is designed for scalable, 
+distributed multimodal AI processing, enabling efficient 
+handling of text, image, and multimodal data using 
+transformer models deployed across clusters. The design 
+emphasizes real-time inference, memory efficiency, 
+modular extensibility, and continual learning using modern 
+distributed systems.             </p>
+      <div className='lg:flex  md:flex  bg-blue-600 text-xl gap-3 sm:p-10 items-center w-fit  align-middle px-10  scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 mt-6 -mb-16 p-4'>
+      <GoDownload size={35}/><a href='' download={PdfDoc} type='application/pdf'  >View Paper</a>
+      </div>
+      </center>
+   
     </div>
+    
   );
 };
 

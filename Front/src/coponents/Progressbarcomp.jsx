@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const ProgressBar = ({ progress,techname }) => {
   return (
-    <div className='hover:scale-110 scale-90 duration-200'>
+    <div className='hover:scale-95 scale-90 duration-200'>
              <p className='text-2xl py-5  ' >{techname}</p>
     <div className="w-full bg-white  rounded-full h-1.5 overflow-hidden hover:scale-110 duration-200 ">
       <motion.div
@@ -14,7 +14,7 @@ const ProgressBar = ({ progress,techname }) => {
             damping:25,
           }}
 
-        className="bg-blue-500 h-full text-white text-sm font-medium text-center leading-6 transition-all  duration-300 ease-in-out"
+        className="bg-blue-500 h-full  text-white text-sm font-medium text-center leading-6 transition-all  duration-300 ease-in-out"
         style={{ width: `${progress}%` }}
       >
       </motion.div>
