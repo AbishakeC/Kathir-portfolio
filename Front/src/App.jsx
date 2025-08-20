@@ -10,7 +10,7 @@ import ContactUs from './coponents/ContactUs.jsx'
 
 const App = () => {
   return (
-    <div >
+    <div className='' >
     <Header/>
     <Mainpage/>
        <p className='text-base lg:text-2xl md:text-lg text-blue-600 font-raw py-2 my-4 px-3 scale-75 sm:scale-90'>
@@ -38,7 +38,7 @@ Focused on building intelligent, scalable, and user-friendly solutions with prec
 
       <p className='text-base lg:text-2xl md:text-lg text-blue-500 font-raw py-2 my-16 px-3 scale-75 sm:scale-90'>
 Contact
-Lets connect to collaborate, innovate, and create impactful solutions.
+Let's connect to collaborate, innovate, and create impactful solutions.
 Reach out via phone, email, or social platforms to start the conversation. </p>
     <ContactUs/>
     <p className='text-base lg:text-2xl md:text-lg text-blue-500 sm:text-blue-100 sm:scale-95 font-raw py-2 my-16 px-3 scale-75 sm:scale-90'>

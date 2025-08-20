@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Projectcomp from '../coponents/Projectcomp';
 import { GoDownload } from 'react-icons/go';
-import PdfDoc from '../assets/Paper.pdf';
+import PdfDoc from '../assets/Paper2.pdf';
 
 
 import aiimagegen from "../assets/projectimage/aimagegen.jpg";
@@ -18,6 +18,7 @@ import personal from '../assets/projectimage/robo.jpg';
 import gemini from '../assets/projectimage/gemini.jpg';
 import oip from '../assets/projectimage/OIP.Webp';
 import dashboard from '../assets/projectimage/Dashboard.png';
+import handW from '../assets/projectimage/OIP.jpg';
 
 import video1 from '../assets/Videos/imagegeneration.mp4';
 import video14 from '../assets/Videos/dashboard.mp4';
@@ -201,11 +202,31 @@ Thrilled to showcase my latest project: a full-stack Finance Analysis & Insights
 🚀 Deployed as containerized microservices; scalable & modular by design
 `;
 
+const newProject = `🚀 New Project Completed!
+
+I built a Handwriting Analysis Web App using Streamlit, Python, and OpenCV 🎯
+
+🔍 Features showcased in the demo:
+✔ Upload handwritten samples for analysis
+✔ Automatic detection of margins, baselines, slants, and spacing
+✔ Visual overlays to highlight handwriting characteristics
+✔ Lightweight, interactive, and easy to use
+
+💡 Potential applications include forensic document analysis, signature verification, and personality insights.
+
+This was a fun project where I learned a lot about computer vision, text analysis, and UI deployment with Streamlit.
+
+📌 Tech Stack: Python | Streamlit | OpenCV | NumPy | Matplotlib
+
+👉 Excited to keep building more AI + CV projects like this!
+
+#AI #Streamlit #ComputerVision #HandwritingAnalysis #OpenCV #PythonProjects`;
 
 // Project list
 const projectList = [
   { topic: "Own Chatbot", imagename: personal, videoname: video9, elaborate: personalchat },
   { topic: "AI Image Generator", imagename: aiimagegen, videoname: video1, elaborate: aitxt },
+  { topic: "HandWriting Analysis", imagename: handW , videoname: video13, elaborate: newProject },
   { topic: "Dashboard", imagename: dashboard, videoname: video14, elaborate: finAnalysis },
   { topic: "Gemini Chatbot", imagename: gemini, videoname: video6, elaborate: geminichatbor },
   { topic: "Semantic Search", imagename: scematic, videoname: video11, elaborate: scematictext },
@@ -227,7 +248,7 @@ const Page4 = () => {
   const visibleProjects = showAll ? projectList : projectList.slice(0, 5);
 
   return (
-    <div className="min-h-screen bg-transparent text-white py-16 px-6 -mt-28 sm:mt-4">
+    <div className="min-h-screen bg-transparent text-white py-16 px-6 -mt-28 sm:mt-4 ">
       <h1 className="text-center text-4xl lg:text-6xl font-boldy mb-14">Projects</h1>
 
       <div className="container mx-auto grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -256,7 +277,7 @@ Committed to contributing impactful ideas to the academic and developer communit
  </p>
 
             <h1 className="text-center text-4xl lg:text-6xl sm:mt-20 font-boldy mt-10 mb-10">Paper publision</h1>
-             <p className='text-base lg:text-2xl md:text-lg text-white font-raw py-2 px-3'>
+             <p className='text-base lg:text-2xl md:text-lg scale-90 text-white font-raw py-2 px-3'>
 Abstract— This architecture is designed for scalable, 
 distributed multimodal AI processing, enabling efficient 
 handling of text, image, and multimodal data using 
@@ -265,7 +286,7 @@ emphasizes real-time inference, memory efficiency,
 modular extensibility, and continual learning using modern 
 distributed systems.             </p>
       <div className='lg:flex  md:flex  bg-blue-600 text-xl gap-3 sm:p-10 sm:flex-col sm:gap-y-7 items-center w-fit  align-middle px-10  scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 mt-6 -mb-16 p-4'>
-      <GoDownload size={35}/><a href='' download={PdfDoc} type='application/pdf'  >View Paper</a>
+      <GoDownload size={35}/><a href='' download={PdfDoc} type='application/pdf'>View Paper</a>
       </div>
       </center>
    

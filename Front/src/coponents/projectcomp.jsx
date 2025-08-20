@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FiX } from 'react-icons/fi';
+import {motion} from 'framer-motion'
 
 const Projectcomp = ({
   topic,
@@ -18,10 +19,10 @@ const Projectcomp = ({
   }, [isOpen]);
 
   return (
-    <div className="w-full mb-6 rounded-xl py-6 px-4 cursor-pointer group transition bg-white shadow-xl shadow-white/50">
+    <div className="w-full mb-6 rounded-xl py-6 px-4 cursor-pointer group transition  bg-white shadow-xl shadow-white/50 ">
       {/* Card Content */}
       <div
-        className="flex flex-col md:flex-row items-start md:items-center gap-4"
+        className="flex flex-col md:flex-row items-start md:items-center gap-4 "
         onClick={() => setIsOpen(true)}
       >
         <img
@@ -54,22 +55,23 @@ const Projectcomp = ({
         <>
           {/* Modal background */}
           <div
-            className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/70 z-40 backdrop-blur-sm delay-200 "
             onClick={() => setIsOpen(false)}
           ></div>
 
           {/* Modal content */}
-          <div
+          < motion.div initial={{opacity:0.7}} animate={{opacity:1}}   exit={{ opacity: 0.4, scale: 0.9 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
             role="dialog"
             aria-modal="true"
             className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                        w-[95%] max-w-6xl max-h-[90vh] z-50  overflow-y-auto [scrollbar-width:thin] [scrollbar-color:#3b82f6_#e5e7eb]
-                       rounded-xl shadow-xl bg-blue-950/60 text-white 
-                       backdrop-blur-2xl border border-white/20 p-6"
+                       rounded-xl shadow-xl  bg-black/80 text-white 
+                       backdrop-blur-md border border-white/20 p-10 sm:scale-90"
           >
             {/* Modal Header */}
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="lg:text-6xl md:text-2xl sm:text-xl font-semibold">{topic}</h3>
+            <div className="flex justify-between items-center mb-4 sm:pb-6 sticky">
+              <h3 className="lg:text-6xl md:text-2xl sm:text-2xl font-semibold text-blue-700">{topic}</h3>
               <FiX
                 size={28}
                 onClick={() => setIsOpen(false)}
@@ -79,7 +81,7 @@ const Projectcomp = ({
             </div>
 
             {/* Modal Body */}
-            <div className="flex flex-col lg:flex-row gap-6 ">
+            <div className="flex flex-col lg:flex-row gap-x-12 sm:gap-y-12 ">
               <div className="w-full lg:w-3/5">
                 <video
                   src={videoname}
@@ -91,13 +93,13 @@ const Projectcomp = ({
                 />
               </div>
 
-              <div className="lg:w-2/5 max-h-[60vh]  pr-2">
-                <p className=" font-sans lg:text-[16px] md:text-lg font-semibold  leading-relaxed whitespace-pre-wrap">
+              <div className="lg:w-2/5 max-h-[60vh] sm:px-7">
+                <p className=" font-sans lg:text-[16px] md:text-lg font-semibold  leading-relaxed whitespace-pre-wrap text-start ">
                   {elaborate || "No description available for this project."}
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </>
       )}
     </div>

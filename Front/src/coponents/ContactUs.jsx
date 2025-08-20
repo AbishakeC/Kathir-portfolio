@@ -27,7 +27,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto px-6 py-10 bg-white/5 rounded-xl shadow-lg">
+    <div className="max-w-xl mx-auto px-6 py-10 bg-white/5 rounded-xl shadow-lg sm:scale-90 hover:scale-95 duration-200">
       <h1 className='text-6xl font-sans text-blue-500 pb-4 ml-[23%]'>Contact me</h1>
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
         <label className="text-blue-600 font-semibold">Name</label>

@@ -63,8 +63,18 @@ const Page2 = () => {
       <center>
         <h1 className="text-6xl font-boldy mt-12 -mb-24">Personals</h1>
       </center>
-      <div className="flex lg:flex-row flex-col justify-around align-middle mt-32 scale-90 gap-6">
+      <div className="flex lg:flex-row flex-col justify-around align-middle mt-32  scale-90 gap-6  sm:mr-16">
       
+        {/* Education */}
+        <Section title="Education" className='p-9 '>
+          <Educationbar topic="Graduation" details="Bachelor of Technology" />
+          <Educationbar topic="Domain" details="Information Technology" />
+          <Educationbar topic="Percentage" details="71%" />
+        </Section>
+
+
+        
+
 
         {/* Tech */}
         <Section title="Tech | Tools">
@@ -79,21 +89,19 @@ const Page2 = () => {
         </Section>
 
         
-        {/* Skills */}
-        <Section title="Skills">
+       
+
+        
+          {/* Skills */}
+
+        <Section title="Skills" className="p-10 ">
           <ProgressBar progress={90} techname="Python" />
           <ProgressBar progress={60} techname="React JS" />
-          <ProgressBar progress={75} techname="Machine Learning & Deep Learning" />
+          <ProgressBar progress={75} techname="Machine Learning" />
+          <ProgressBar progress={70} techname="Deep Learning" />
           <ProgressBar progress={90} techname="Flask" />
           <ProgressBar progress={70} techname="Database" />
           <ProgressBar progress={75} techname="Data Science" />
-        </Section>
-
-          {/* Education */}
-        <Section title="Education" className='px-9'>
-          <Educationbar topic="Graduation" details="Bachelor of Technology" />
-          <Educationbar topic="Domain" details="Information Technology" />
-          <Educationbar topic="Percentage" details="71%" />
         </Section>
         
       </div>

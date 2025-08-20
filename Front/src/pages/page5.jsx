@@ -6,7 +6,7 @@ const Page5 = () => {
     <div className='flex flex-col align-middle justify-center items-center scale-90  '>
         <h1 className='text-6xl text-white font-boldy mt-6 -mb-8'>About</h1>
 
-       <img src={predator} width={600}         className="w-[450px] h-[350px] relative top-24 z-50 sm:scale-90 sm:rounded-3xl mt-6 object-cover hover:scale-105 duration-300 rounded-md mb-0"
+       <img src={predator} width={600}         className="w-[450px] h-[350px] relative top-24 z-50 sm:scale-90 sm:rounded-xl mt-6 object-cover hover:scale-105 duration-300 rounded-md mb-0"
  alt="" srcset="" />
  <div className='bg-gradient-to-br from-black  via-slate-950  to-blue-950  mx-12 py-10 h-fit sm:w-[100%] md:w-[100%]   flex flex-col align-middle rounded-md rounded-b-3xl scale-90 my-4'>
        <div className='my-9 font-semibold px-6 sm:scale-90'>

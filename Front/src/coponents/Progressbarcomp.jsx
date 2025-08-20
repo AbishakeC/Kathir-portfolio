@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const ProgressBar = ({ progress,techname }) => {
   return (
-    <div className='hover:scale-95 scale-90 duration-200'>
-             <p className='text-2xl py-5  ' >{techname}</p>
+    <div className='hover:scale-95 scale-75  duration-200 '>
+             <p className='text-2xl py-5  font-raw ' >{techname}</p>
     <div className="w-full bg-white  rounded-full h-1.5 overflow-hidden hover:scale-110 duration-200 ">
       <motion.div
         initial={{opacity:0,x:-105}}
