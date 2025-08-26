@@ -9,9 +9,9 @@ module.exports = {
         EagleLake:"Eagle+Lake",
 lavish: ['"Lavishly Yours"', 'cursive'],
  eagle: ['"Eagle Lake"', 'cursive'],  
-
-
-
+},
+screens:{
+  sm:"480px"
 }
     },
   },

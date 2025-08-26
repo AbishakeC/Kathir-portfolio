@@ -251,7 +251,7 @@ const Page4 = () => {
     <div className="min-h-screen bg-transparent text-white py-16 px-6 -mt-28 sm:mt-4 ">
       <h1 className="text-center text-4xl lg:text-6xl font-boldy mb-14">Projects</h1>
 
-      <div className="container mx-auto grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto grid lg:gap-10 sm:gap-2 md:gap-4  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {visibleProjects.map((project, idx) => (
           <Projectcomp key={idx} {...project} />
         ))}
@@ -285,9 +285,9 @@ transformer models deployed across clusters. The design
 emphasizes real-time inference, memory efficiency, 
 modular extensibility, and continual learning using modern 
 distributed systems.             </p>
-      <div className='lg:flex  md:flex  bg-blue-600 text-xl gap-3 sm:p-10 sm:flex-col sm:gap-y-7 items-center w-fit  align-middle px-10  scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 mt-6 -mb-16 p-4'>
-      <GoDownload size={35}/><a href='' download={PdfDoc} type='application/pdf'>View Paper</a>
-      </div>
+      <a href='' download={PdfDoc} type='application/pdf'><div className='lg:flex  md:flex  bg-blue-600 text-xl gap-3 sm:p-10 sm:flex-col sm:gap-y-7 items-center w-fit  align-middle px-10  scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 mt-6 -mb-16 p-4'>
+      <GoDownload size={35}/>View Paper
+      </div></a>
       </center>
    
     </div>

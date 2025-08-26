@@ -29,7 +29,7 @@ const Section = ({ title, children }) => {
   };
 
   return (
-    <div className="h-fit w-fit sm:w-[95vh] sm:ml-16 sm:px-4 md:w-[90%] md:mx-10 sm:mx-2 sm:my-3 lg:mx-2 bg-white/5 shadow-lg shadow-black rounded-md p-4">
+    <div className="h-fit w-fit sm:w-[90vh] sm:-ml-8 sm:scale-75 lg:scale-95 lg:ml-5  sm:px-4 md:w-[90%] md:mx-10 sm:mx-2  lg:mx-2 bg-white/5 shadow-lg shadow-black rounded-md p-4">
       {/* Section Header */}
       <div
         className={`flex justify-between items-center cursor-pointer ${

@@ -11,7 +11,7 @@ const Archivements = ({ topic, detailing, imagename }) => {
     <>
       {/* Card */}
       <div
-        className="bg-slate-950 rounded-md shadow-lg shadow-black/50 overflow-hidden w-full p-4 hover:shadow-xl hover:scale-105 hover:bg-white group duration-200
+        className="bg-transparent sm:max-w-full sm:max-h-[30rem] lg:max-h-full   rounded-md shadow-lg shadow-black/50 overflow-hidden w-full p-4 hover:shadow-xl hover:scale-105 hover:bg-white group duration-200
                    flex flex-col sm:flex-col md:flex-col"
       >
         {/* Image first on small screens */}
@@ -27,7 +27,7 @@ const Archivements = ({ topic, detailing, imagename }) => {
           <h1 className="lg:text-lg sm:text-xl font-bold text-blue-700 group-hover:text-black mb-2">
             {topic}
           </h1>
-          <p className="lg:text-md sm:text-md sm:py-6 py-3 text-white group-hover:text-black font-sans">
+          <p className="lg:text-md sm:text-md lg:max-w-full sm:text-sm sm:py-6 py-3 text-white group-hover:text-black font-sans">
             {detailing}
           </p>
         </div>

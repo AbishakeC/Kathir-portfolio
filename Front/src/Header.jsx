@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-row bg-slate-900 px-5 h-24 md:px-8 sm:px-12 justify-between items-center z-50 relative sm:w-screen md:w-screen">
+    <div className="flex flex-row bg-slate-900  px-5 h-24 md:px-8 sm:px-6 justify-between items-center z-50 relative sm:w-screen md:w-screen">
       <div className="flex flex-row items-center">
         <motion.div initial={{ opacity: 0, x: -105 }}
             animate={{ opacity: 1, x: 0 }}
@@ -17,7 +17,7 @@ const Header = () => {
               stiffness: 100,
               damping: 20,
               delay:0.3
-            }} className="bg-gradient-to-tr from-white via-violet-200 to-white text-2xl font-extrabold text-black p-5 rounded-md">
+            }} className="bg-gradient-to-tr from-white via-violet-200 to-white text-2xl sm:p-3 font-extrabold text-black lg:p-5 rounded-md">
           K
         </motion.div>
         <motion.h1 initial={{ opacity: 0, x: -105 }}
@@ -27,7 +27,7 @@ const Header = () => {
               stiffness: 100,
               damping: 35,
               delay:0.7
-            }}  className="text-2xl font-semibold text-white p-4 dark:text-violet-900 font-sans">
+            }}  className="text-2xl sm:text-xl font-semibold text-white p-4 dark:text-violet-900 font-sans">
           Portfolio
         </motion.h1>
       </div>

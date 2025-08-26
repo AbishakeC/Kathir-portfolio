@@ -12,7 +12,7 @@ body{
     margin: 0%;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    @apply bg-gradient-to-l  from-black via-slate-900 to-slate-950
+    @apply bg-gradient-to-l  from-black via-slate-900 to-slate-950 overflow-x-hidden
 }
 
 /* src/index.css or global.css */
