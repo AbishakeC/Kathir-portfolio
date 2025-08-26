@@ -8,7 +8,7 @@ const Page5 = () => {
 
        <img src={predator} width={600}   className="w-[450px] h-[350px] relative top-24 z-50 sm:scale-75 sm:-mb-12 sm:rounded-xl  object-cover hover:scale-105 duration-300 rounded-md mb-0"
  alt="" srcset="" />
- <div className='bg-gradient-to-br from-black  via-slate-950  to-blue-950  mx-12 py-10 h-fit sm:w-[100%] md:w-[100%]   flex flex-col align-middle rounded-md rounded-b-3xl scale-90 my-4'>
+ <div className='bg-gradient-to-br from-black  via-slate-950  to-blue-950  mx-12 py-10 h-fit sm:w-[100%] md:w-[100%]  flex flex-col align-middle rounded-md rounded-b-3xl scale-90 my-4'>
        <div className='my-9 font-semibold px-6 sm:scale-75 lg:scale-90'>
      I’m a passionate AI & Machine Learning Engineer with a strong focus on Prompt Engineering, Deep Learning, and intelligent data-driven solutions. My expertise lies in designing and fine-tuning advanced language models, creating AI-powered tools, and developing deep learning architectures that solve complex real-world problems. I specialize in integrating large language models with cutting-edge NLP techniques, building robust machine learning pipelines, and leveraging cloud platforms like AWS for scalable AI deployments. With hands-on experience in Python, TensorFlow, PyTorch, and modern AI frameworks, I thrive on transforming ideas into impactful, future-ready AI 
      solutions — from predictive analytics to generative AI applications.

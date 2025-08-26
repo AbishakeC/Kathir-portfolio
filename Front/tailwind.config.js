@@ -11,7 +11,8 @@ lavish: ['"Lavishly Yours"', 'cursive'],
  eagle: ['"Eagle Lake"', 'cursive'],  
 },
 screens:{
-  sm:"480px"
+  sm:"480px",
+  sw:"640px"
 }
     },
   },

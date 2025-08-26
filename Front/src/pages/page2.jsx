@@ -29,7 +29,8 @@ const Section = ({ title, children }) => {
   };
 
   return (
-    <div className="h-fit w-fit sm:w-[90vh] sm:-ml-8 sm:scale-75 lg:scale-95 lg:ml-5  sm:px-4 md:w-[90%] md:mx-10 sm:mx-2  lg:mx-2 bg-white/5 shadow-lg shadow-black rounded-md p-4">
+    <div className="h-fit w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] 
+                    bg-white/5 shadow-lg shadow-black rounded-md p-4 mx-auto">
       {/* Section Header */}
       <div
         className={`flex justify-between items-center cursor-pointer ${
@@ -37,7 +38,9 @@ const Section = ({ title, children }) => {
         } transition`}
         onClick={toggleOpen}
       >
-        <h1 className="text-5xl sm:text-4xl font-bold text-blue-500">{title}</h1>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-500">
+          {title}
+        </h1>
         {!isLargeScreen && (
           <span>
             {isOpen ? <FiChevronUp size={24} /> : <FiChevronDown size={24} />}
@@ -59,22 +62,19 @@ const Section = ({ title, children }) => {
 
 const Page2 = () => {
   return (
-    <>
-      <center>
-        <h1 className="text-6xl font-boldy mt-12 -mb-24">Personals</h1>
-      </center>
-      <div className="flex lg:flex-row flex-col justify-around align-middle mt-32  scale-90 gap-6  sm:mr-16">
-      
+    <div className="items-center flex flex-col px-2 sm:px-4 md:px-6 lg:my-6 ">
+      <h1 className="text-4xl font-raw   sm:text-4xl md:text-6xl font-bold mt-12 sm:-mb-3 lg:mb-10 ">
+        Personals
+      </h1>
+
+      <div className="flex flex-col lg:flex-row justify-around mt-20 gap-6 w-full sm:scale-75 lg:scale-95 sm:-mt-1 max-w-6xl">
+        
         {/* Education */}
-        <Section title="Education" className='p-9 '>
+        <Section title="Education">
           <Educationbar topic="Graduation" details="Bachelor of Technology" />
           <Educationbar topic="Domain" details="Information Technology" />
           <Educationbar topic="Percentage" details="71%" />
         </Section>
-
-
-        
-
 
         {/* Tech */}
         <Section title="Tech | Tools">
@@ -88,13 +88,8 @@ const Page2 = () => {
           <Techcomp techname="Mongo DB" />
         </Section>
 
-        
-       
-
-        
-          {/* Skills */}
-
-        <Section title="Skills" className="p-10 ">
+        {/* Skills */}
+        <Section title="Skills">
           <ProgressBar progress={90} techname="Python" />
           <ProgressBar progress={60} techname="React JS" />
           <ProgressBar progress={75} techname="Machine Learning" />
@@ -103,9 +98,9 @@ const Page2 = () => {
           <ProgressBar progress={70} techname="Database" />
           <ProgressBar progress={75} techname="Data Science" />
         </Section>
-        
+
       </div>
-    </>
+    </div>
   );
 };
 

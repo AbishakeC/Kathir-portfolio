@@ -38,7 +38,7 @@ const Mainpage = () => {
       //   delay:0.9,
       // }}
       
-      className="flex flex-col-reverse lg:flex-row w-full items-center justify-between gap-8 py-10">
+      className="flex flex-col-reverse lg:flex-row w-full items-center align-middle justify-between gap-8 py-10">
           
           <div className='w-full lg:w-1/2 text-center lg:text-left'>
             <motion.div initial={{opacity:0,x:-120}} animate={{opacity:1,x:2}} transition={{stiffness:20, damping:70, duration:0.7 , delay:0.3}}><h1 className='text-6xl sm:mt-[15vh] md:text-6xl lg:text-7xl font-boldy text-blue-400 py-4'>Kathirvel Murugesan</h1></motion.div>
@@ -46,7 +46,7 @@ const Mainpage = () => {
             <p className='text-base lg:text-2xl md:text-lg text-white font-raw py-2 px-3'>
               With expertise in AI, ML, and Python frameworks, I build creative and artistic applications.
             </p>
-            <div className='lg:flex sm:flex md:flex sm:ml-[20%] sm:scale-75 sm:my-2 lg:-ml-8 bg-blue-600 text-xl gap-3 items-center w-fit  align-middle px-7 -ml-6 scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 -mb-14 p-4'>
+            <div className='lg:flex sm:flex md:flex sm:ml-[20%] ml-[50%]  sm:scale-75 sm:my-2 lg:-ml-8 bg-blue-600 text-xl gap-3 items-center w-fit  align-middle px-7  scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 -mb-14 p-4'>
             <GoDownload size={35}/>   <a href='' download={PdfDoc} type='application/pdf'  >  Download Resume</a>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Mainpage = () => {
           </div>
         </motion.div>
 
-        <motion.div className='flex flex-col  lg:w-full   md:flex-row sm:flex-row sm:w-[100vh]  justify-around items-center bg-transparent  bg-opacity-35 shadow-blue-400  shadow-md  p-6 rounded-3xl  scale-50 max-w-6xl gap-6  lg:mt-5'  
+        <motion.div className='flex flex-col  lg:w-full   md:flex-row sm:flex-row sm:w-[120vh]  justify-around items-center bg-transparent  bg-opacity-35 shadow-blue-400  shadow-md  p-6 rounded-3xl  scale-50 max-w-6xl gap-6  lg:mt-5'  
         > 
           <div className='text-center   hover:scale-110 duration-300'>
             <span className='text-5xl font-extrabold text-white'>15+</span>
