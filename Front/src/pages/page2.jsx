@@ -69,7 +69,7 @@ const Page2 = () => {
 
       <div className="flex flex-col lg:flex-row justify-around mt-20 gap-6 w-full sm:scale-75 lg:scale-95 sm:-mt-1 max-w-6xl">
         
-        {/* Education */}
+        {/* Education state change */}
         <Section title="Education">
           <Educationbar topic="Graduation" details="Knowledge Institite of technology" />
           <Educationbar topic="Degree" details="Bachelor of Technology" />

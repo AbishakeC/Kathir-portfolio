@@ -19,7 +19,7 @@ const Projectcomp = ({
   }, [isOpen]);
 
   return (
-    <div className="w-full  mb-6 rounded-xl group hover:bg-black hover:-translate-y-2 py-6 px-4 cursor-pointer group transition  bg-white shadow-xl shadow-white/50 duration-200 ">
+    <div className="w-full  mb-6 rounded-xl group hover:bg-black  py-6 px-4 cursor-pointer group transition  bg-white shadow-xl shadow-white/50 duration-200 ">
       {/* Card Content */}
       <div
         className="flex flex-col md:flex-row  items-start md:items-center gap-4 "
