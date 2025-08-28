@@ -71,7 +71,8 @@ const Page2 = () => {
         
         {/* Education */}
         <Section title="Education">
-          <Educationbar topic="Graduation" details="Bachelor of Technology" />
+          <Educationbar topic="Graduation" details="Knowledge Institite of technology" />
+          <Educationbar topic="Degree" details="Bachelor of Technology" />
           <Educationbar topic="Domain" details="Information Technology" />
           <Educationbar topic="Percentage" details="71%" />
         </Section>
@@ -83,20 +84,18 @@ const Page2 = () => {
           <Techcomp techname="Anaconda" />
           <Techcomp techname="Azure | AWS | mLops" />
           <Techcomp techname="Dockers" />
-          <Techcomp techname="Jenkins | Kubernets" />
           <Techcomp techname="GIT HUB" />
-          <Techcomp techname="Mongo DB" />
+          <Techcomp techname="Linux" />
         </Section>
 
         {/* Skills */}
         <Section title="Skills">
           <ProgressBar progress={90} techname="Python" />
-          <ProgressBar progress={60} techname="React JS" />
-          <ProgressBar progress={75} techname="Machine Learning" />
-          <ProgressBar progress={70} techname="Deep Learning" />
+          <ProgressBar progress={92} techname="Machine Learning" />
+          <ProgressBar progress={92} techname="Deep Learning" />
           <ProgressBar progress={90} techname="Flask" />
-          <ProgressBar progress={70} techname="Database" />
           <ProgressBar progress={75} techname="Data Science" />
+          <ProgressBar progress={60} techname="React JS" />
         </Section>
 
       </div>

@@ -33,7 +33,7 @@ const Header = () => {
       </div>
 
       <div className="lg:flex hidden space-x-4 p-3 rounded-lg px-14">
-        {["Just Scroll","Down"," And Explore"].map((item, index) => (
+        {[].map((item, index) => (
           <motion.a
             key={item}
             initial={{ opacity: 0, y: -35 }}
@@ -84,7 +84,7 @@ const Header = () => {
 </a>
 
 <a
-  href="https://wa.me/919025666734"
+  href=""
   target="_blank"
   rel="no opener no referrer"
 >

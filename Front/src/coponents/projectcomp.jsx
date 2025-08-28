@@ -19,10 +19,10 @@ const Projectcomp = ({
   }, [isOpen]);
 
   return (
-    <div className="w-full mb-6 rounded-xl py-6 px-4 cursor-pointer group transition  bg-white shadow-xl shadow-white/50 ">
+    <div className="w-full  mb-6 rounded-xl group hover:bg-black hover:-translate-y-2 py-6 px-4 cursor-pointer group transition  bg-white shadow-xl shadow-white/50 duration-200 ">
       {/* Card Content */}
       <div
-        className="flex flex-col md:flex-row items-start md:items-center gap-4 "
+        className="flex flex-col md:flex-row  items-start md:items-center gap-4 "
         onClick={() => setIsOpen(true)}
       >
         <img
@@ -31,8 +31,8 @@ const Projectcomp = ({
           className="w-full md:w-48 h-52 rounded-lg object-cover shadow"
         />
 
-        <div className="flex-1">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-950 group-hover:text-gray-950">
+        <div className="flex-1 ">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-950 group-hover:text-white">
             {topic}
           </h2>
           <p className="text-gray-600 mt-1 mb-3 text-sm md:text-base">
@@ -43,7 +43,7 @@ const Projectcomp = ({
               e.stopPropagation(); // prevent click from bubbling and reopening
               setIsOpen(true);
             }}
-            className="text-blue-600 px-4 py-2 rounded hover:shadow-blue-800/70 transition font-semibold shadow-xl"
+            className="text-white px-4 py-2  group-hover:text-blue-600  rounded group-hover:bg-white bg-blue-700 hover:shadow-white/30 transition font-semibold shadow-md"
           >
             ▶ Play Demo
           </button>

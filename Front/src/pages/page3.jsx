@@ -18,10 +18,10 @@ const Page3 = () => {
     <div className="w-full scale-90 px-4 py-6">
       {/* Dropdown Header */}
       <div
-        className="cursor-pointer bg-blue-700/80 hover:bg-blue-900/45 text-white text-center flex flex-row justify-between px-6 items-center rounded-lg py-4 shadow-lg shadow-black/60 transition-all duration-200 "
+        className="cursor-pointer animate-pulse bg-blue-700/80 hover:bg-blue-900/45 text-white text-center flex flex-row justify-between px-6 items-center rounded-lg py-4 shadow-lg shadow-black/60 transition-all duration-200 "
         onClick={toggleDropdown}
       >
-        <h1 className="text-3xl sm:text-2xl lg:text-5xl font-boldy">
+        <h1 className="text-3xl sm:text-2xl lg:text-5xl font-boldy ">
           Achievements
         </h1>
         <span className="p-4 text-white">{isOpen ? '▲' : '▼'}</span>

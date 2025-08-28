@@ -6,7 +6,7 @@ import { GoDownload } from 'react-icons/go';
 
 const Mainpage = () => {
   return (
-    <div className='relative min-h-screen'>
+    <div className='relative lg:min-h-screen sm:h-1/2'>
       
       {/* Background image */}
       <motion.div  
@@ -22,7 +22,7 @@ const Mainpage = () => {
         style={{ backgroundImage: `url(${tecky})` }}
       />
 
-      <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+      <div className="absolute inset-0 bg-black opacity-75 z-10"></div>
 
       <section className='relative z-20 min-h-screen flex flex-col sm:scale-75 lg:scale-90 justify-center items-center px-4 lg:px-20'>
         
@@ -38,15 +38,15 @@ const Mainpage = () => {
       //   delay:0.9,
       // }}
       
-      className="flex flex-col-reverse lg:flex-row w-full items-center align-middle justify-between gap-8 py-10">
+      className="flex flex-col-reverse lg:flex-row sm:w-[100vh] lg:w-full px-3 items-center align-middle justify-center gap-8 py-10">
           
-          <div className='w-full lg:w-1/2 text-center lg:text-left'>
-            <motion.div initial={{opacity:0,x:-120}} animate={{opacity:1,x:2}} transition={{stiffness:20, damping:70, duration:0.7 , delay:0.3}}><h1 className='text-6xl sm:mt-[15vh] md:text-6xl lg:text-7xl font-boldy text-blue-400 py-4'>Kathirvel Murugesan</h1></motion.div>
-            <h3 className='text-3xl animate-pulse sm:text-xl md:text-2xl font-semibold text-white py-2 px-3'>AI ML  --  Prompt Engineer</h3>
+          <div className='w-full lg:w-1/2  text-center lg:text-left lg:block sm:flex flex-col items-center  backdrop-opacity-10 justify-center'>
+            <motion.div initial={{opacity:0,x:-120}} animate={{opacity:1,x:2}} transition={{stiffness:20, damping:70, duration:0.7 , delay:0.3}}><h1 className='text-5xl sm:mt-[15vh] md:text-6xl lg:text-5xl font-semibold py-4   text-blue-600 '>Kathirvel Murugesan</h1></motion.div>
+            <h3 className='text-3xl animate-pulse sm:text-xl md:text-2xl font-light text-white py-2 px-3'>AI ML -- Prompt Engineer <br></br>MLOPS Engineer</h3>
             <p className='text-base lg:text-2xl md:text-lg text-white font-raw py-2 px-3'>
               With expertise in AI, ML, and Python frameworks, I build creative and artistic applications.
             </p>
-            <div className='lg:flex sm:flex md:flex sm:ml-[20%] ml-[50%]  sm:scale-75 sm:my-2 lg:-ml-8 bg-blue-600 text-xl gap-3 items-center w-fit  align-middle px-7  scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 -mb-14 p-4'>
+            <div className='lg:flex sm:flex md:flex    sm:scale-75 sm:my-2 lg:-ml-8 bg-blue-600 text-xl gap-3 items-center w-fit  align-middle px-7  scale-75 hover:scale-100 hover:text-blue-800 hover:bg-white rounded-md duration-200  my-2 -mb-14 p-4'>
             <GoDownload size={35}/>   <a href='' download={PdfDoc} type='application/pdf'  >  Download Resume</a>
             </div>
           </div>
@@ -71,8 +71,8 @@ const Mainpage = () => {
           </div>
 
           <div className='text-center hover:scale-110 duration-300'>
-            <span className='text-5xl font-extrabold  text-white'>20</span>
-            <h2 className='text-xl md:text-2xl font-bold  text-white mt-2'>Age</h2>
+            <span className='text-5xl font-extrabold  text-white'>50+</span>
+            <h2 className='text-xl md:text-2xl font-bold  text-white mt-2'>Certifications</h2>
           </div>
 
           <div className='text-center hover:scale-110 duration-300'>

@@ -17,7 +17,7 @@ const Educationbar = ({topic,details}) => {
        {`${topic}`}</div>
   
 
-        <div className='text-xl py-3 scale-95
+        <div className='text-md py-3 scale-95
          font-boldy text-white p-2 m-2 hover:bg-white hover:text-blue-600 bg-blue-700 hover:scale-105 duration-200 delay-1505 rounded-lg px-4 '>
             {details}
         </div>
